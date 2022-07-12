@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luka</title>
+</head>
+<body>
+	<h1 class="text-center" id="count-down-timer"></h1>
+	<button onclick="inicio()">Reloj</button><br><br>
+	<button onclick="boton()">Sumar</button>
+	<script type="text/javascript">
+function paddedFormat(num) {
+    return num < 10 ? "0" + num : num; 
+}
+
+function startCountDown(duration, element) {
+
+    let secondsRemaining = duration;
+   
+    let sec = 0;
+
+    let countInterval = setInterval(function () {
+
+       
+        sec = parseInt(secondsRemaining % 60);
+
+        element.textContent = `${paddedFormat(sec)}`;
+
+        secondsRemaining = secondsRemaining - 1;
+        if (secondsRemaining < 0) { 
+        	clearInterval(countInterval);
+        	document.write(String.fromCodePoint(clas)+" "+(punt)) ;
+ };
+
+    }, 1000);
+}
+
+function inicio() {
+     // Value in minutes
+    let time_seconds = 5; // Value in seconds
+
+    let duration = time_seconds;
+
+    element = document.querySelector('#count-down-timer');
+    element.textContent = `${paddedFormat(time_seconds)}`;
+
+    startCountDown(--duration, element);
+};
+		
+		
+		var clas,punt;
+		punt=0;
+
+		function boton(){
+			punt++;
+			clas = (
+		68*(punt<20) // D
+		+67*(punt>19 && punt<40) // C
+		+66*(punt>39 && punt<60) // B
+		+65*(punt>59 && punt<70) // A
+		+83*(punt>69) // S
+);
+			console.log(String.fromCodePoint(clas));
+		}
+
+		
+
+
+
+		
+
+		
+
+
+
+
+	</script>
+
+</body>
+</html>
